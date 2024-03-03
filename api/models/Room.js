@@ -28,6 +28,10 @@ const RoomSchema = new mongoose.Schema({
         type: String,
         default: ''
     },
+    guesses: {
+        type: [Schema.Types.Mixed],
+        default: []
+    },
     roomId: {
         type: String,
         required: [true, 'Please provide a room id'],

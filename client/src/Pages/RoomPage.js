@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link, Navigate, useParams } from 'react-router-dom';
+import Guess from '../Components/Guess';
+import CheckGuess from '../Components/CheckGuess';
 
 function RoomPage() {
     const { id } = useParams();
@@ -303,6 +305,7 @@ function RoomPage() {
                                 <button className='story-button' onClick={GameStory}>Approve Story</button>
                                 </div>
                             ): null}
+                            <CheckGuess />
                         </div>
                     ) : (
                         <div>
@@ -312,9 +315,10 @@ function RoomPage() {
                             ) : (
                                 <p className='waiting-message'>Waiting for story teller...</p>
                             )}
+                            <Guess />
                         </div>
                     )}
-
+                    <CheckGuess />
                 </>                
             )}
         </div>
