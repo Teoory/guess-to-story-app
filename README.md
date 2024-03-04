@@ -7,7 +7,7 @@
 - One person becomes the storyteller, this person chooses the story they want to tell, the players try to solve the story and the event by asking yes/no or true/false questions to the narrator based on the clue sentence of this story.
 
 <hr/>
-<h1>Artık ["Guess the story app"](https://guess-to-story-app.vercel.app/) adresinden ulaşabilirsiniz.</h1> 
+<h1>Artık https://guess-to-story-app.vercel.app adresinden ulaşabilirsiniz.</h1> 
 
 <br/>
 <hr/>
