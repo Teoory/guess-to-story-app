@@ -16,6 +16,14 @@ p {
     user-select: auto;
 }
 
+.true {
+    background-color: #28a74650;
+}
+
+.false {
+    background-color: #dc354550;
+}
+
 /* Home Page */
 .home-page-container {
     text-align: center;
@@ -71,9 +79,9 @@ p {
 .needCode {
     color: #dc3545;
     background-color: #ccc !important;
-    font-size: 14px;
-    margin-top: 10px;
-    cursor: not-allowed;
+    font-size: 14px !important;
+    margin-top: 10px !important;
+    cursor: not-allowed !important;
 }
 
 /* ROOM Page */
@@ -319,6 +327,39 @@ p {
     border-left: 1px solid #ccc7;
 }
 
+.newGuessForm {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.newGuessText {
+    color: #007bff;
+    font-weight: bold;
+}
+
+.newGuessInput {
+    padding: 10px;
+    color: #007bff;
+    border: 1px solid #007bff;
+    border-radius: 10px;
+    margin-left: 10px;
+    width: 400px;
+    height: 40px;
+    text-align: start;
+}
+
+.newGuessButton {
+    padding: 10px;
+    background-color: green;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 800;
+}
+
+
 /* Login Page */
 .loginArea {
     display: flex;
@@ -390,4 +431,20 @@ p {
     gap: 2px;
     margin: 0 0 15px 5px;
     color: #dc3545;
+}
+
+@media (max-width: 768px) {
+    .newGuessInput {
+        width: 350px;
+    }
+}
+
+@media (max-width: 450px) {
+    .newGuessForm {
+        flex-direction: column;
+    }
+    .newGuessInput {
+        width: 100%;
+        margin-left: 0;
+    }
 }

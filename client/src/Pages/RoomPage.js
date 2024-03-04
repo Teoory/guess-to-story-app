@@ -281,7 +281,7 @@ function RoomPage() {
                 {username === 'user1' ? (
                     <div className='fx-c'><Link className='leave-room-link' to="/" onClick={handleModLeaveGame}>Delete Room</Link></div>
                 ) : username === 'user2' ? (
-                    <div className="fx-c"><Link className='leave-room-link' to="/" onClick={handleLeaveGame}>Leave Room</Link></div>
+                    <div className="fx-c"><Link className={`leave-room-link ${!storyTeller ? '' : 'needCode'}`} to="/" onClick={!storyTeller ? handleLeaveGame : null}>Leave Room</Link></div>
                 ) : null}
 
                     <p className='role-info storyTellerCount'>StoryTellerCount: <span className={storyTellerCount === 0 ? 'danger' : 'success'}>{storyTellerCount}/1</span></p>
@@ -307,6 +307,9 @@ function RoomPage() {
                             <p className='story-teller-info'>Your Role: Story Teller</p>
                             <p className='story-info-t'>Cümle: {story.cümle}</p>
                             <p className='story-info-p'>Hikaye: {story.hikaye}</p>
+                            {/* <div className="fxc">
+                                <Link className='leave-room-link' to="/">End of Game</Link>
+                            </div> */}
                             {/* hikayeyi onayla */}
                             {!ApproveStory ? (
                                 <div className='story-buttons'>

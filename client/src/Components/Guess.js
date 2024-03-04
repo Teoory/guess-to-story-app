@@ -43,12 +43,12 @@ const Guess = () => {
   return (
     <div>
         <h1>Add Guess</h1>
-        <form onSubmit={handleSubmit}>
+        <form className='newGuessForm' onSubmit={handleSubmit}>
             <label>
-                Guess:
-                <input type="text" value={guess} onChange={(e) => setGuess(e.target.value)} />
+                <span className='newGuessText'>Guess:</span>
+                <input className='newGuessInput' type="text" value={guess} onChange={(e) => setGuess(e.target.value)} />
             </label>
-            <button type="submit">Submit</button>
+                <button className='newGuessButton' type="submit">Submit</button>
         </form>
         <h2>Guesses</h2>
         {guesses && guesses.length > 0 ? (
@@ -56,7 +56,7 @@ const Guess = () => {
                 {guesses
                 .sort((a,b) => new Date(b.createdAt) - new Date(a.createdAt))
                 .map(guess => (
-                    <li key={guess._id}>
+                    <li className={`guesses ${guess.status == 'true' ? 'true' :  'false'}`} key={guess._id}>
                     <p className='guessArea selectable'>
                         <span className='guessList'>{guess.guess}</span>
                         <span className='guessStatus'>

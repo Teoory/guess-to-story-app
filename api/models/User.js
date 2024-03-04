@@ -25,7 +25,11 @@ const UserSchema = new mongoose.Schema({
     profilePhoto: {
         type: String,
         default: 'https://fiyasko-blog-app.s3.eu-central-1.amazonaws.com/profilePhotos/default.jpg'
-    }
+    },
+    score: {
+        type: Number,
+        default: 0
+    },
 });
 
 const UserModel = model('User', UserSchema);
