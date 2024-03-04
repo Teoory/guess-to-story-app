@@ -14,6 +14,10 @@ const GuessSchema = new mongoose.Schema({
     roomId: {
         type: String,
         required: [true, 'Please provide a room id']
+    },
+    createdAt: {
+        type: Date,
+        default: Date.now
     }
 });
 

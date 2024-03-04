@@ -318,7 +318,6 @@ function RoomPage() {
                             <Guess />
                         </div>
                     )}
-                    <CheckGuess />
                 </>                
             )}
         </div>

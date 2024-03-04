@@ -42,11 +42,11 @@ function HomePage() {
   return (
     <div className='home-page-container'>
         <h1>Home Page</h1>
+        <button className='home-page-button' onClick={handleCreateRoom}>Create Room</button>
         <div className="buttonArea">
-          <button className='home-page-button' onClick={handleCreateRoom}>New Room</button>
           <input className='home-page-input' type="text" placeholder="Enter room code" value={roomCode} onChange={handleInputChange} />
+          <button className={`home-page-button joinButton ${roomCode.length === 6 ? '' : 'needCode'}`} onClick={roomCode.length === 6 ? handleJoinRoom : null}>Join</button>
         </div>
-        <button className='home-page-button joinButton' onClick={handleJoinRoom}>Join</button>
         <div className="Amac">
           <p>Sherlock</p>
           <p>Anlatıcının görevi: <span>Hikayeyi okuyarak oyuncuları yönlendirmeli ve oyuncuların hikayeyi bulmasını sağlamaktır.</span></p>
