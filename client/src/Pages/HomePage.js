@@ -10,7 +10,7 @@ function HomePage() {
   };
 
   const handleCreateRoom = async () => {
-    const response = await fetch('http://localhost:3030/createRoom', {
+    const response = await fetch('https://guess-to-story-api.vercel.app/createRoom', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -23,7 +23,7 @@ function HomePage() {
   };
 
   const handleJoinRoom = async () => {
-    const response = await fetch(`http://localhost:3030/joinRoom`, {
+    const response = await fetch(`https://guess-to-story-api.vercel.app/joinRoom`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

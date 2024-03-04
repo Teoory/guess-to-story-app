@@ -6,7 +6,7 @@ const CreateStoryPage = () => {
         ev.preventDefault();
         const cümle = document.getElementById('cümle').value;
         const hikaye = document.getElementById('hikaye').value;
-        fetch('http://localhost:3030/addStory', {
+        fetch('https://guess-to-story-api.vercel.app/addStory', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

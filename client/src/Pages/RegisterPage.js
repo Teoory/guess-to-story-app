@@ -25,7 +25,7 @@ const RegisterPage = () => {
             alert('Lütfen şifrenizi kontrol edin!');
             return;
         }
-        const response = await fetch('http://localhost:3030/register', {
+        const response = await fetch('https://guess-to-story-api.vercel.app/register', {
             method: 'POST',
             body: JSON.stringify({username, password, email}),
             headers: {'Content-Type': 'application/json'},

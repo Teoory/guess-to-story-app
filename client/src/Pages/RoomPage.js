@@ -21,7 +21,7 @@ function RoomPage() {
 
     const fetchRoomData = async () => {
         if (!GameStarted) {
-            const response = await fetch(`http://localhost:3030/room/${id}/userCount`);
+            const response = await fetch(`https://guess-to-story-api.vercel.app/room/${id}/userCount`);
             const data = await response.json();
             setPlayerCount(data.userCount);
         } else {
@@ -45,7 +45,7 @@ function RoomPage() {
     }, []);
 
     const handleLeaveGame = () => {
-        const response = fetch('http://localhost:3030/leaveRoom', {
+        const response = fetch('https://guess-to-story-api.vercel.app/leaveRoom', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -54,7 +54,7 @@ function RoomPage() {
         });
     }
     const handleModLeaveGame = () => {
-        const response = fetch('http://localhost:3030/deleteRoom', {
+        const response = fetch('https://guess-to-story-api.vercel.app/deleteRoom', {
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json',
@@ -72,7 +72,7 @@ function RoomPage() {
 
     const handleStartGame = () => {
         if (!GameStarted) {
-        fetch(`http://localhost:3030/room/${id}/gameStarted`, {
+        fetch(`https://guess-to-story-api.vercel.app/room/${id}/gameStarted`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -87,7 +87,7 @@ function RoomPage() {
 
     const checkGameStarted = async () => {
         if (!GameStarted) {
-            const response = await fetch(`http://localhost:3030/room/${id}/gameStarted`);
+            const response = await fetch(`https://guess-to-story-api.vercel.app/room/${id}/gameStarted`);
             const data = await response.json();
             setGameStarted(data.gameStarted); 
         } else {
@@ -98,7 +98,7 @@ function RoomPage() {
 
     const checkStoryTellerCount = async () => {
         if (!GameStarted) {
-            const response = await fetch(`http://localhost:3030/room/${id}/storyTellerCount`);
+            const response = await fetch(`https://guess-to-story-api.vercel.app/room/${id}/storyTellerCount`);
             const data = await response.json();
             setStoryTellerCount(data.storyTellerCount);
         } else {
@@ -122,7 +122,7 @@ function RoomPage() {
 
     const checkStory = async () => {
         if (!getStory) {
-        const response = await fetch(`http://localhost:3030/story`);
+        const response = await fetch(`https://guess-to-story-api.vercel.app/story`);
         const data = await response.json();
         const randomIndex = Math.floor(Math.random() * data.length);
         setStory(data[randomIndex]);
@@ -139,7 +139,7 @@ function RoomPage() {
     }
 
     const CheckGameStory = async () => {
-        const response = await fetch(`http://localhost:3030/room/${id}/story`);
+        const response = await fetch(`https://guess-to-story-api.vercel.app/room/${id}/story`);
         const data = await response.json();
         setStory(data.story);
         setSelectedStory(data.story);
@@ -158,7 +158,7 @@ function RoomPage() {
 
     if (username === 'user2') {
         setTimeout(async () => {
-            const response = await fetch(`http://localhost:3030/room/${id}`);
+            const response = await fetch(`https://guess-to-story-api.vercel.app/room/${id}`);
             if (!response.ok) {
                 setRedirect(true);
             }
@@ -166,14 +166,14 @@ function RoomPage() {
     }
 
     const handleStoryTeller = () => {
-        fetch(`http://localhost:3030/room/${id}/storyTellerCountAdd`, {
+        fetch(`https://guess-to-story-api.vercel.app/room/${id}/storyTellerCountAdd`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify({ roomId: id }),
         });
-        fetch(`http://localhost:3030/room/${id}/playerCountDell`, {
+        fetch(`https://guess-to-story-api.vercel.app/room/${id}/playerCountDell`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -185,14 +185,14 @@ function RoomPage() {
     }
 
     const handlePlayer = () => {
-        fetch(`http://localhost:3030/room/${id}/storyTellerCountDel`, {
+        fetch(`https://guess-to-story-api.vercel.app/room/${id}/storyTellerCountDel`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify({ roomId: id }),
         });
-        fetch(`http://localhost:3030/room/${id}/playerCountAdd`, {
+        fetch(`https://guess-to-story-api.vercel.app/room/${id}/playerCountAdd`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -204,7 +204,7 @@ function RoomPage() {
     }
 
     const firstHandlePlayer = () => {
-        fetch(`http://localhost:3030/room/${id}/playerCountAdd`, {
+        fetch(`https://guess-to-story-api.vercel.app/room/${id}/playerCountAdd`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -214,7 +214,7 @@ function RoomPage() {
     }
 
     const GameStory = () => {
-        fetch(`http://localhost:3030/room/${id}/story`, {
+        fetch(`https://guess-to-story-api.vercel.app/room/${id}/story`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -225,7 +225,7 @@ function RoomPage() {
     }
 
     const NewStory = async () => {
-        const response = await fetch(`http://localhost:3030/story`);
+        const response = await fetch(`https://guess-to-story-api.vercel.app/story`);
         const data = await response.json();
         const randomIndex = Math.floor(Math.random() * data.length);
         setStory(data[randomIndex]);
