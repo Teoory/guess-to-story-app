@@ -1,6 +1,5 @@
 *.idea
 *api/uploads/*
-api/index.js
 .env
 
 api/profilePhotos/*
