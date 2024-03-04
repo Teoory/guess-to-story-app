@@ -27,6 +27,7 @@ const RegisterPage = () => {
         }
         const response = await fetch('https://guess-to-story-api.vercel.app/register', {
             method: 'POST',
+            credentials: 'include',
             body: JSON.stringify({username, password, email}),
             headers: {'Content-Type': 'application/json'},
         });

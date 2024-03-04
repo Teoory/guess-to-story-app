@@ -47,6 +47,7 @@ function RoomPage() {
     const handleLeaveGame = () => {
         const response = fetch('https://guess-to-story-api.vercel.app/leaveRoom', {
             method: 'POST',
+            credentials: 'include',
             headers: {
                 'Content-Type': 'application/json',
             },
@@ -56,6 +57,7 @@ function RoomPage() {
     const handleModLeaveGame = () => {
         const response = fetch('https://guess-to-story-api.vercel.app/deleteRoom', {
             method: 'DELETE',
+            credentials: 'include',
             headers: {
                 'Content-Type': 'application/json',
             },
@@ -74,6 +76,7 @@ function RoomPage() {
         if (!GameStarted) {
         fetch(`https://guess-to-story-api.vercel.app/room/${id}/gameStarted`, {
             method: 'POST',
+            credentials: 'include',
             headers: {
                 'Content-Type': 'application/json',
             },
@@ -168,6 +171,7 @@ function RoomPage() {
     const handleStoryTeller = () => {
         fetch(`https://guess-to-story-api.vercel.app/room/${id}/storyTellerCountAdd`, {
             method: 'POST',
+            credentials: 'include',
             headers: {
                 'Content-Type': 'application/json',
             },
@@ -175,6 +179,7 @@ function RoomPage() {
         });
         fetch(`https://guess-to-story-api.vercel.app/room/${id}/playerCountDell`, {
             method: 'POST',
+            credentials: 'include',
             headers: {
                 'Content-Type': 'application/json',
             },
@@ -187,6 +192,7 @@ function RoomPage() {
     const handlePlayer = () => {
         fetch(`https://guess-to-story-api.vercel.app/room/${id}/storyTellerCountDel`, {
             method: 'POST',
+            credentials: 'include',
             headers: {
                 'Content-Type': 'application/json',
             },
@@ -194,6 +200,7 @@ function RoomPage() {
         });
         fetch(`https://guess-to-story-api.vercel.app/room/${id}/playerCountAdd`, {
             method: 'POST',
+            credentials: 'include',
             headers: {
                 'Content-Type': 'application/json',
             },
@@ -206,6 +213,7 @@ function RoomPage() {
     const firstHandlePlayer = () => {
         fetch(`https://guess-to-story-api.vercel.app/room/${id}/playerCountAdd`, {
             method: 'POST',
+            credentials: 'include',
             headers: {
                 'Content-Type': 'application/json',
             },
@@ -216,6 +224,7 @@ function RoomPage() {
     const GameStory = () => {
         fetch(`https://guess-to-story-api.vercel.app/room/${id}/story`, {
             method: 'POST',
+            credentials: 'include',
             headers: {
                 'Content-Type': 'application/json',
             },
