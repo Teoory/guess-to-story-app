@@ -36,6 +36,11 @@ const RoomSchema = new mongoose.Schema({
         type: String,
         required: [true, 'Please provide a room id'],
         unique: true
+    },
+    createdAt: {
+        type: Date,
+        default: Date.now,
+        expires: 21600
     }
 });
 
