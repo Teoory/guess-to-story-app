@@ -327,6 +327,7 @@ function RoomPage() {
                             <Guess />
                         </div>
                     )}
+                    <div className='fx-c' style={{marginTop:'100px'}}><Link className='leave-room-link' to="/" onClick={handleLeaveGame}>Leave Room</Link></div>
                 </>                
             )}
         </div>

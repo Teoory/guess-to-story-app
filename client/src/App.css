@@ -11,6 +11,7 @@ p {
     user-select: none;
 }
 
+
 .selectable {
     user-select: auto;
 }
@@ -316,4 +317,77 @@ p {
     width: 25%;
     text-align: center;
     border-left: 1px solid #ccc7;
+}
+
+/* Login Page */
+.loginArea {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 600px;
+}
+
+.loginArea form {
+    max-width: 400px;
+    background-color: #383838;
+    border-radius: 25px;
+    padding: 20px;
+}
+
+.loginArea h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.loginArea form input {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+    border: 1px solid #cccccc50;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.loginArea form .inputArea {
+    display: grid;
+    justify-items: stretch;
+}
+
+.loginArea form button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px 0;
+    width: 100%;
+    padding: 10px;
+    border-radius: 25px;
+    background-color: #007bff;
+    color: #fff;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.loginArea .newAccount {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    color: #fff;
+}
+
+.loginArea .newAccount a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.loginArea .password-validations {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    margin: 0 0 15px 5px;
+    color: #dc3545;
 }

@@ -36,6 +36,7 @@ const LoginPage = () => {
     <div className='loginArea'>
       <form className="login" onSubmit={login}>
         <h1>Giriş Yap</h1>
+        <div className="inputArea">
         <input   type="text"
                 placeholder="username" 
                 value={username}
@@ -46,6 +47,7 @@ const LoginPage = () => {
                 value={password}
                 required
                 onChange={ev => setPassword(ev.target.value)}/>
+        </div>
         <button>Giriş</button>
         <div className='newAccount'>Hesabın yokmu? <Link to="/register">Yeni Hesap Oluştur</Link></div>
       </form>

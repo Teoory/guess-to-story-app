@@ -63,6 +63,7 @@ const RegisterPage = () => {
         <div className='loginArea'>
           <form className="login" onSubmit={register}>
             <h1>Kayıt Ol</h1>
+            <div className="inputArea">
             <input type="email"
                     placeholder="email"
                     value={email}
@@ -82,18 +83,19 @@ const RegisterPage = () => {
                     required
                     autoComplete="off"
                     onChange={handleChangePassword} />
-                    <ul>
+                    <div style={{marginBottom:'10px'}}>
                       {!passwordValidations.minLength && <li style={{color: passwordValidations.minLength ? 'green' : 'red'}}>En az 8 karakter</li>}
                       {!passwordValidations.hasUppercase && <li style={{color: passwordValidations.hasUppercase ? 'green' : 'red'}}>Büyük harf</li>}
                       {!passwordValidations.hasLowercase && <li style={{color: passwordValidations.hasLowercase ? 'green' : 'red'}}>Küçük harf</li>}
                       {!passwordValidations.hasNumber && <li style={{color: passwordValidations.hasNumber ? 'green' : 'red'}}>Rakam</li>}
-                    </ul>
+                    </div>
             <input type="password"
                     placeholder="confirm password"
                     value={confirmPassword}
                     required
                     onChange={ev => setConfirmPassword(ev.target.value)} />
                     {confirmPassword !== '' && password !== confirmPassword && <div className="password-validations">Şifreler eşleşmiyor!</div>}
+            </div>
             <button>Kayıt Ol</button>
             <div className='newAccount'>Zaten bir hesabın var mı? <Link to="/login">Giriş Yap</Link></div>
           </form>
