@@ -15,7 +15,7 @@ const Guess = () => {
 
     const getGuesses = async () => {
         try {
-            const response = await fetch (`http://localhost:3030/room/${id}/guesses`);
+            const response = await fetch (`https://guess-to-story-api.vercel.app/room/${id}/guesses`);
             const data = await response.json();
             setGuesses(data);
         } catch (e) {
@@ -26,7 +26,7 @@ const Guess = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await fetch (`http://localhost:3030/room/${id}/addGuess`, {
+            const response = await fetch (`https://guess-to-story-api.vercel.app/room/${id}/addGuess`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
