@@ -11,6 +11,9 @@ p {
     user-select: none;
 }
 
+.dnone {
+    display: none;
+}
 
 .selectable {
     user-select: auto;

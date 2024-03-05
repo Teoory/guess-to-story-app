@@ -281,7 +281,7 @@ function RoomPage() {
                 {username === 'user1' ? (
                     <div className='fx-c'><Link className='leave-room-link' to="/" onClick={handleModLeaveGame}>Delete Room</Link></div>
                 ) : username === 'user2' ? (
-                    <div className="fx-c"><Link className={`leave-room-link ${!storyTeller ? '' : 'needCode'}`} to="/" onClick={!storyTeller ? handleLeaveGame : null}>Leave Room</Link></div>
+                    <div className="fx-c"><Link className={`leave-room-link ${!storyTeller ? '' : 'dnone'}`} to="/" onClick={!storyTeller ? handleLeaveGame : null}>Leave Room</Link></div>
                 ) : null}
 
                     <p className='role-info storyTellerCount'>StoryTellerCount: <span className={storyTellerCount === 0 ? 'danger' : 'success'}>{storyTellerCount}/1</span></p>
