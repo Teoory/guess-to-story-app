@@ -96,7 +96,7 @@ const RegisterPage = () => {
                     onChange={ev => setConfirmPassword(ev.target.value)} />
                     {confirmPassword !== '' && password !== confirmPassword && <div className="password-validations">Şifreler eşleşmiyor!</div>}
             </div>
-            <button>Kayıt Ol</button>
+            <button style={{cursor:"pointer",border:"1px solid #000"}}>Kayıt Ol</button>
             <div className='newAccount'>Zaten bir hesabın var mı? <Link to="/login">Giriş Yap</Link></div>
           </form>
         </div>

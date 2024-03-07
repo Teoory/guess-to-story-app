@@ -48,7 +48,7 @@ const LoginPage = () => {
                 required
                 onChange={ev => setPassword(ev.target.value)}/>
         </div>
-        <button>Giriş</button>
+        <button style={{cursor:"pointer",border:"1px solid #000"}}>Giriş</button>
         <div className='newAccount'>Hesabın yokmu? <Link to="/register">Yeni Hesap Oluştur</Link></div>
       </form>
     </div>
