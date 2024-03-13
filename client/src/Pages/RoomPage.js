@@ -138,7 +138,10 @@ function RoomPage() {
     if (GameStarted && !storyTeller && !checkedStory) {
         setTimeout(() => {
             CheckGameStory();
-        }, 3000);
+        }, 2000);
+        setTimeout(() => {
+            CheckGameStory();
+        }, 10000);
     }
 
     const CheckGameStory = async () => {
